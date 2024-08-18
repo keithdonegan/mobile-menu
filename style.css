@@ -3,3 +3,26 @@
     margin: 0;
     box-sizing: border-box;
 }
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 0 15px;
+}
+.flex {
+    display: flex;
+    border: 2px solid blue;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** 
+ * 
+ */
+ul#menu-primary {
+    background: orange;
+    display: flex;
+    list-style: none;
+}
