@@ -17,27 +17,37 @@ body {
     border: 1px solid red;
     padding: 0 15px;
 }
-.flex {
+#header-flex {
     display: flex;
-    border: 2px solid blue;
     gap: 50px;
     justify-content: space-between;
     align-items: center;
 }
 
+#header-primary {
+   /*  margin-top: 15px; */
+}
+
 /** 
  * Primary nav
  */
+#nav-primary {
+    height: 75px;
+}
 ul#menu-primary {
     background: orange;
     display: flex;
     list-style: none;
     align-items: center;
+    height: 100%;;
 }
     ul#menu-primary a {
         display: flex;
         align-items: center;
     }
+        ul#menu-primary li {
+            margin-left: 20px;
+        }
         ul#menu-primary .sub-menu {
             visibility: hidden;
             opacity: 0;
@@ -48,17 +58,18 @@ ul#menu-primary {
     * Desktop only
     */
     @media (hover: hover) {
+        #header-primary {
+            margin-top: 0;
+        }
         ul#menu-primary {
-            height: 75px;
+            
         }
             ul#menu-primary li {
                 margin-left: 20px;
                 position: relative;
                 height: 100%
             }
-            ul#menu-primary li.has-children {
-                margin-left: 20px;
-            }
+            
                 ul#menu-primary > li > a {
                     border: 2px dashed #fff;
                     height: 100%;
@@ -78,11 +89,24 @@ ul#menu-primary {
     }
 
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 900px) {
 
-        ul#menu-primary {
-            background-color: red;
+        #header-flex {
             flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
         }
+        #nav-primary {
+            width: 100%;
+            position: absolute;
+        }
+            ul#menu-primary {
+                background-color: red;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+                ul#menu-primary li {
+                    margin: 0;
+                }
 
     }
