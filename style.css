@@ -24,15 +24,13 @@ body {
 }
 
 #header-primary {
-   /*  margin-top: 15px; */
+   height: 75px;
 }
 
 /** 
  * Primary nav
  */
-#nav-primary {
-    height: 75px;
-}
+
 ul#menu-primary {
     background: orange;
     display: flex;
@@ -59,6 +57,9 @@ ul#menu-primary {
     @media (hover: hover) {
         #header-primary {
             margin-top: 0;
+        }
+        #nav-primary {
+            height: 75px;
         }
         ul#menu-primary {
             
