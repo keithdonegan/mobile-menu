@@ -51,7 +51,6 @@ body {
 }
 
 ul#menu-primary {
-    background: orange;
     display: flex;
     list-style: none;
     align-items: center;
@@ -60,9 +59,12 @@ ul#menu-primary {
     ul#menu-primary a {
         display: flex;
         align-items: center;
+        text-decoration: none;
+        color: #de466c;
     }
         ul#menu-primary li {
             margin-left: 20px;
+            position: relative;
         }
         ul#menu-primary .sub-menu {
             visibility: hidden;
@@ -84,12 +86,10 @@ ul#menu-primary {
             }
                 ul#menu-primary li {
                     margin-left: 20px;
-                    position: relative;
                     height: 100%
                 }
                 
                     ul#menu-primary > li > a {
-                        border: 2px dashed #fff;
                         height: 100%;
                     }
                         ul#menu-primary ul.sub-menu {
@@ -101,16 +101,33 @@ ul#menu-primary {
                                 margin: 0;
                             }
                                 ul#menu-primary ul.sub-menu a {
-                                    background-color: red;
+                                    
                                 }
+
+    }
+
+    @media (hover: none) {
+
+        ul#menu-primary .sub-menu {
+            width: 100%;
+        }
+
+        li.has-children a::after {
+            content: "";
+            width: 55px;
+            height: calc(100% - 1px);
+            background-color: #efefef;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
 
     }
 
     @media only screen and (max-width: 900px) {
 
-        * {
-            border: 1px solid red;
-        }
         #header-flex {
             flex-direction: column;
             align-items: flex-start;
@@ -121,14 +138,22 @@ ul#menu-primary {
             position: absolute;
             top: 75px;
             height: auto;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
         }
             ul#menu-primary {
-                background-color: red;
                 flex-direction: column;
                 align-items: flex-start;
             }
                 ul#menu-primary li {
                     margin: 0;
+                    width: 100%;
                 }
+                    ul#menu-primary a {
+                        border-bottom: 1px solid #ccc;
+                        width: 100%;
+                        padding: 15px;
+                    }
 
     }
