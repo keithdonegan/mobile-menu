@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuItems = document.querySelectorAll('#menu-primary .has-children');
+    const menuItemsWithChildren = document.querySelectorAll('#menu-primary .has-children');
 
-    menuItems.forEach(item => {
-        item.addEventListener('hover', function(event) {
-            // event.preventDefault();
-            // const submenu = this.nextElementSibling;
-            // submenu.classList.toggle('open');
+   menuItemsWithChildren.forEach(item => {
+        item.addEventListener('mouseenter', function(event) {
+            item.classList.add('is-active');
         });
+
+        item.addEventListener('mouseleave', function(event) {
+            item.classList.remove('is-active');
+        });
+
+        /* item.addEventListener('click', function(event) {
+            item.classList.toggle('clicked');
+        }); */
+        
     });
 });
