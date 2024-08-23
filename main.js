@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuItems = document.querySelectorAll('#menu-primary .has-children > a');
+    const menuItems = document.querySelectorAll('#menu-primary .has-children');
 
     menuItems.forEach(item => {
         item.addEventListener('hover', function(event) {
