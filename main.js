@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (window.matchMedia('(hover: hover)').matches) {
 
-        console.log('sd');
+        
 
         menuItemsWithChildren.forEach(item => {
             item.addEventListener('mouseenter', function(event) {
+
+                console.log('clicky');
+
                 item.classList.add('is-active');
             });
 
