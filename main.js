@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             parentLi.classList.remove('is-active');
         }); */
 
-            
     });
     
 });
